@@ -1,0 +1,63 @@
+<!-- 需要验证用户是否已经绑定，若无绑定则禁止发布商品 -->
+<view class="main">
+    <form bindsubmit="#" bindreset="#">
+        <view class="view titleView">
+            <view class="title">
+              <image src="../../images/标题栏.png"></image>
+              商品标题
+            </view>
+            <textarea name="title" placeholder="不超过50个字" bindinput="#" auto-focus="true" auto-height="true">
+            </textarea> 
+        </view>
+        <view class="view classificationView">
+            <view class="classification">
+              <image src="../../images/类型.png"></image>
+              商品类型
+            </view>
+            <picker name="classification" value="{{selectedClass}}" range="{{classificationList}}" bindchange="pickerChange">
+                {{classificationList[selectedClass]}}
+            </picker>
+        </view>
+        <view class="view priceView">
+            <view class="price">
+              <image src="../../images/价格详情.png"></image>
+              商品价格
+            </view>
+            <input type="number" name="price"></input>
+        </view>
+        <view class="view imageView">
+            <view class="image">
+              <image src="../../images/图片.png"></image>
+              商品图片
+            </view>
+            <button bindtap="chooseImage" name="image">选择图片</button>
+        </view>
+        <view class="view detailView">
+            <view class="detail">
+              <image src="../../images/行程描述.png"></image>
+              商品详细描述
+            </view>
+            <view class="container">
+              <editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
+              </editor>
+              <view class="toolbar" catchtouchend="format">
+                <i class="iconfont icon-charutupian" catchtouchend="insertImage"></i>
+                <i class="iconfont icon-format-header-2 {{formats.header === 2 ? 'ql-active' : ''}}" data-name="header" data-value="{{2}}"></i>
+                <i class="iconfont icon-format-header-3 {{formats.header === 3 ? 'ql-active' : ''}}" data-name="header" data-value="{{3}}"></i>
+                <i class="iconfont icon-zitijiacu {{formats.bold ? 'ql-active' : ''}}" data-name="bold"></i>
+                <i class="iconfont icon-zitixieti {{formats.italic ? 'ql-active' : ''}}" data-name="italic"></i>
+                <i class="iconfont icon-zitixiahuaxian {{formats.underline ? 'ql-active' : ''}}" data-name="underline"></i>
+                <i class="iconfont icon--checklist" data-name="list" data-value="check"></i>
+                <i class="iconfont icon-youxupailie {{formats.list === 'ordered' ? 'ql-active' : ''}}" data-name="list" data-value="ordered"></i>
+                <i class="iconfont icon-wuxupailie {{formats.list === 'bullet' ? 'ql-active' : ''}}" data-name="list" data-value="bullet"></i>
+              </view>
+            </view>
+        </view>
+        <button name="publish" class="publish" form-type="submit">
+            发布商品
+        </button>
+    </form>
+
+    <!-- <import src="../index/index.wxml"/>    
+    <template is="bottomNav"/> -->
+</view>

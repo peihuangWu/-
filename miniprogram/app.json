@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goods_list_page/goods_list_page",
+    "pages/personal_page/personal_page",
+    "pages/my_goods_page/my_goods_page",
+    "pages/my_collect_page/my_collect_page",
+    "pages/my_order_page/my_order_page",
+    "pages/publish_goods_page/publish_goods_page",
+    "pages/goods_detail_page/goods_detail_page",
+    "pages/my_info_page/my_info_page",
+    "pages/my_message_page/my_message_page",
+    "pages/one_message_page/one_message_page",
+    "pages/buy_page/buy_page",
+    "pages/about_ seller_page/about_seller_page"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#515151",
+    "navigationBarTitleText": "买啥卖啥呢",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

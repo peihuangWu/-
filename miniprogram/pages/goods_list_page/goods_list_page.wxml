@@ -1,0 +1,27 @@
+<view class="main">
+  <view class='page_row'>  
+      <view class="search">  
+        <icon class="searchIcon" size='20' type='search'></icon>  
+        <input placeholder="搜索商品" value="{{searchValue}}"/>  
+      </view>  
+      <view class='sousuo'>搜索</view>  
+  </view>
+
+  <!-- bug:划到底部时候无法触发事件 -->
+  <scroll-view class="list" scroll-y="true" bindscrolltolower="scrollToLower" lower-threshold="30">
+      <block wx:for="{{goodsList}}">
+        <view class="goods">
+            <navigator url="{{item.url}}">
+              <view class="goodsImg">
+                <image src="{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="goordsInfo">
+                <text class="goodsTitle">{{item.title}}</text>
+                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+              </view>
+            </navigator>
+        </view>
+      </block>
+  </scroll-view>
+</view>
+

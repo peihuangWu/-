@@ -1,0 +1,62 @@
+<view class="main">
+    <!-- 这三个list打算弄成折叠面板 -->
+
+    <view class="list">
+      <view class="listNav">
+          <text>已完成</text>
+      </view>
+      <block wx:for="{{completedOrders}}">
+        <view class="goods">
+            <navigator url="{{item.url}}">
+              <view class="goodsImg">
+                <image src="{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="goordsInfo">
+                <text class="goodsTitle">{{item.title}}</text>
+                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+              </view>
+            </navigator>
+        </view>
+      </block>
+    </view>
+
+    <view class="list">
+        <view class="listNav">
+            <text>已支付</text>
+        </view>
+        <block wx:for="{{payedOrders}}">
+          <view class="goods">
+              <navigator url="{{item.url}}">
+                <view class="goodsImg">
+                  <image src="{{item.src}}" mode="aspectFill"></image>
+                </view>
+                <view class="goordsInfo">
+                  <text class="goodsTitle">{{item.title}}</text>
+                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+                </view>
+              </navigator>
+              <view class="received">确认收货</view>
+          </view>
+        </block>
+      </view>
+
+    <view class="list">
+        <view class="listNav">
+            <text>待支付</text>
+        </view>
+        <block wx:for="{{unpayedOrders}}">
+          <view class="goods">
+              <navigator url="{{item.url}}">
+                <view class="goodsImg">
+                  <image src="{{item.src}}" mode="aspectFill"></image>
+                </view>
+                <view class="goordsInfo">
+                  <text class="goodsTitle">{{item.title}}</text>
+                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+                </view>
+              </navigator>
+              <view class="pay">前往支付</view>
+          </view>
+        </block>
+    </view>
+</view>

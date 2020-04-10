@@ -1,0 +1,120 @@
+.person {
+  width: 100%;
+  height: 200rpx;
+  background-color: #AEEEEE;
+}
+
+.list{
+  border-top: #C7C7C7 solid 15rpx;
+  border-bottom: #C7C7C7 solid 15rpx;
+}
+
+.list view{
+  width: 100%;
+  height: 80rpx;
+  color:black;
+  font-weight: bold;
+  background-color: #FFF68F;
+  border-bottom: #C7C7C7 solid 1rpx;
+}
+
+.list view navigator {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.list view navigator image:last-of-type {
+    position: absolute;
+    right: 20rpx;
+}
+
+.list view text {
+  line-height: 100%;
+  font-size: 35rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-left: 150rpx;
+  color:#5B5B5B;
+}
+
+.list view image {
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.goodsList{
+  /* margin-top: 30rpx; */
+  width: 100%;
+}
+
+.goodsList.myCollect {
+  border-top: #B8B8B8 solid 3px;
+}
+
+.goodsList .goodsListNav{
+  width: 100%;
+  height: 50rpx;
+  background-color:#E8E8E8;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.goodsList .goodsListNav text {
+  float: left;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.goodsList .goodsListNav navigator {
+  float: right;
+  margin-right: 28rpx;
+}
+
+.goods{
+  margin: 10rpx;
+  border-top: #B8B8B8 solid 1px;
+  width: 95%;
+  height: 120px;
+}
+
+.goods navigator{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.goods navigator .goodsImg {
+  width: 400rpx;
+  height: 250rpx;
+}
+
+.goods .goodsImg image {
+  height: 100%;
+  width: 100%;
+}
+
+.goods .goordsInfo {
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.goods .goordsInfo .goodsTitle{
+  font-size: 25rpx;
+}
+
+.goods .goordsInfo .goodsPrice{
+  font-size: 30rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 50rpx;
+}
+
+.goods .goordsInfo .goodsPrice text{
+  color: red;
+}

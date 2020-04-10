@@ -1,0 +1,8 @@
+<view class="main">
+    <view class="messageBar">
+        消息
+    </view>
+    <view class="content">
+        <text>{{content}}</text>
+    </view>
+</view>

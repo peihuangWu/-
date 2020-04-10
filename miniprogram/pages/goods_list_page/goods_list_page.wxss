@@ -1,0 +1,127 @@
+.product-list {
+  width: 100%;
+  box-sizing: border-box;
+   
+ }
+   
+   
+ .choice-bar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  background-color: #fff;
+  /**z-index: 0;**/
+ }
+ .chioce-item {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  width: 100%;
+  height: 80rpx;
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+  border-left: 1rpx solid #ddd;
+  /*border-right: 1rpx solid #ddd;*/
+ }
+   
+ .icon-chioce {
+  height: 30rpx;
+  width: 30rpx;
+ }
+ .district-list,.sorting-list,.filter-list {
+  margin-top: 2rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: -1;
+  font-size: 14px;
+  border-bottom: 1rpx solid #ddd;
+ }
+ .chioce-list-hide {
+  display: none !important;
+ }
+ .chioce-list-show {
+  /**top: 80rpx;**/
+  animation: slide 500ms;
+ }
+   
+ .sorting-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 40rpx;
+  border-bottom: 1rpx solid #ddd;
+ }
+
+ .list{
+  margin-top: 30rpx;
+  width: 100%;
+}
+
+.list .listNav{
+  width: 100%;
+  height: 50rpx;
+  background-color:#E8E8E8;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.list .listNav text {
+  float: left;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.list .listNav navigator {
+  float: right;
+  margin-right: 28rpx;
+}
+
+.goods{
+  margin: 10rpx;
+  border-bottom: #B8B8B8 solid 1px;
+  width: 95%;
+  height: 120px;
+}
+
+.goods navigator{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.goods navigator .goodsImg {
+  width: 400rpx;
+  height: 230rpx;
+}
+
+.goods .goodsImg image {
+  height: 100%;
+  width: 100%;
+}
+
+.goods .goordsInfo {
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.goods .goordsInfo .goodsTitle{
+  font-size: 25rpx;
+}
+
+.goods .goordsInfo .goodsPrice{
+  font-size: 30rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 50rpx;
+}
+
+.goods .goordsInfo .goodsPrice text{
+  color: red;
+}

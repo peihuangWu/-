@@ -1,0 +1,51 @@
+<view class="main">
+    <view class="info">
+        <view class="view nickname">
+          <image src="../../images/昵称2.png"></image>
+          <text>昵称:</text>
+          <text>{{nickname}}</text>
+        </view>
+        <view class="view gender">
+          <image src="../../images/性别.png"></image>
+          <text>性别:</text>
+          <text>{{gender}}</text>
+        </view>
+        <view class="view college">
+          <image src="../../images/学院.png"></image>
+          <text>所在学院:</text>
+          <text>{{college}}</text>
+        </view>
+        <view class="view birthday">
+          <image src="../../images/出生年月.png"></image>
+          <text>出生年月:</text>
+          <text>{{birthday}}</text>
+        </view>
+        <view class="view signature">
+          <!-- 个性签名不超过50个字 -->
+          <view class="signText">
+            <image src="../../images/个性.png"></image>
+            <text>个性签名:</text>
+          </view>
+          <text>{{signature}}</text>
+        </view>
+    </view>
+
+    <!-- TA卖过的商品 -->
+    <view class="goodsList">
+      <view class="goodsListNav">
+          <text>TA卖过的商品</text>
+      </view>
+      <block wx:for="{{goodsList}}">
+        <view class="goods">
+            <view class="goodsImg">
+              <image src="{{item.src}}" mode="aspectFill"></image>
+            </view>
+            <view class="goordsInfo">
+              <text class="goodsTitle">{{item.title}}</text>
+              <text class="sellNum">数量：{{item.num}}</text>
+              <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+            </view>
+        </view>
+      </block>
+    </view>
+</view>

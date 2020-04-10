@@ -1,0 +1,184 @@
+<view class="main">
+  <view class='page_row'>  
+      <view class="search">  
+        <icon class="searchIcon" size='20' type='search'></icon>  
+        <input placeholder="搜索商品" value="{{searchValue}}"/>  
+      </view>  
+      <view class='sousuo'>搜索</view>  
+  </view>
+  <view class="swiperView"> 
+      <swiper class="banner" indicator-dots="true" autoplay="true" current="0" interval="2000" duration="500" bindchange="bannerChange"> 
+          <block wx:for="{{swiperList}}">
+            <swiper-item>
+                <image src="{{item.src}}" mode="scaleToFill"></image>
+            </swiper-item>
+          </block>
+      </swiper>
+  </view> 
+  <view class="goods_classification">
+      <view>
+        <navigator url="../goods_list_page/goods_list_page">
+          <image src="../../images/书籍.png">
+          </image>
+          书籍资料
+        </navigator>
+      </view>
+      <view>
+      <navigator url="#">
+        <image src="../../images/零食.png">
+        </image>
+        零食特产
+        </navigator>
+      </view>
+      <view>
+      <navigator url="#">
+        <image src="../../images/生活用品.png">
+        </image>
+        生活用品
+        </navigator>
+      </view>
+      <view>
+      <navigator url="#">
+        <image src="../../images/电子设备.png">
+        </image>
+        电子设备
+        </navigator>
+      </view>
+      <view>
+      <navigator url="#">
+        <image src="../../images/水果.png">
+        </image>
+        水果蔬菜
+        </navigator>
+      </view>
+  </view>
+
+  <!-- 各个模块的商品展示 -->
+  <view>
+      <view class="list">
+        <view class="listNav">
+            <text>书籍资料</text>
+            <navigator url="#">全部></navigator>
+        </view>
+        <block wx:for="{{bookList}}">
+          <view class="goods">
+              <!-- <navigator url="{{item.url}}"> -->
+              <navigator url="../goods_detail_page/goods_detail_page">
+                <view class="goodsImg">
+                  <image src="{{item.src}}" mode="aspectFill"></image>
+                </view>
+                <view class="goordsInfo">
+                  <text class="goodsTitle">{{item.title}}</text>
+                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+                </view>
+              </navigator>
+          </view>
+        </block>
+      </view>
+      
+      <view class="list">
+        <view class="listNav">
+            <text>零食特产</text>
+            <navigator url="#">全部></navigator>
+        </view>
+        <block wx:for="{{snacksList}}">
+          <view class="goods">
+              <navigator url="{{item.url}}">
+                <view class="goodsImg">
+                  <image src="{{item.src}}" mode="aspectFill"></image>
+                </view>
+                <view class="goordsInfo">
+                  <text class="goodsTitle">{{item.title}}</text>
+                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+                </view>
+              </navigator>
+          </view>
+        </block>
+      </view>
+
+      <view class="list">
+        <view class="listNav">
+            <text>生活用品</text>
+            <navigator url="#">全部></navigator>
+        </view>
+        <block wx:for="{{liveList}}">
+          <view class="goods">
+              <navigator url="{{item.url}}">
+                <view class="goodsImg">
+                  <image src="{{item.src}}" mode="aspectFill"></image>
+                </view>
+                <view class="goordsInfo">
+                  <text class="goodsTitle">{{item.title}}</text>
+                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+                </view>
+              </navigator>
+          </view>
+        </block>
+      </view>
+
+      <view class="list">
+        <view class="listNav">
+            <text>电子设备</text>
+            <navigator url="#">全部></navigator>
+        </view>
+        <block wx:for="{{electronicList}}">
+          <view class="goods">
+              <navigator url="{{item.url}}">
+                <view class="goodsImg">
+                  <image src="{{item.src}}" mode="aspectFill"></image>
+                </view>
+                <view class="goordsInfo">
+                  <text class="goodsTitle">{{item.title}}</text>
+                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+                </view>
+              </navigator>
+          </view>
+        </block>
+      </view>
+
+      <view class="list">
+        <view class="listNav">
+            <text>水果蔬菜</text>
+            <navigator url="#">全部></navigator>
+        </view>
+        <block wx:for="{{fruitList}}">
+          <view class="goods">
+              <navigator url="{{item.url}}">
+                <view class="goodsImg">
+                  <image src="{{item.src}}" mode="aspectFill"></image>
+                </view>
+                <view class="goordsInfo">
+                  <text class="goodsTitle">{{item.title}}</text>
+                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+                </view>
+              </navigator>
+          </view>
+        </block>
+      </view>
+  </view>
+
+  <template name="bottomNav">
+    <view class="bottomNav">
+        <view>
+          <navigator url="#">
+            <image src="../../images/首页.png"></image>
+            首页
+          </navigator>
+        </view>
+        <view>
+          <navigator url="../publish_goods_page/publish_goods_page">
+            <image src="../../images/发布促销.png"></image>
+            发布商品
+          </navigator>
+        </view>
+        <view>
+          <navigator url="../personal_page/personal_page">
+            <image src="../../images/个人中心.png"></image>
+            个人中心
+          </navigator>
+        </view>
+    </view>
+  </template>
+
+  <template is="bottomNav"/>
+</view>

@@ -1,0 +1,78 @@
+.goodsList{
+  /* margin-top: 30rpx; */
+  width: 100%;
+}
+
+.goodsList .goodsListNav{
+  width: 100%;
+  height: 50rpx;
+  background-color:#E8E8E8;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.goodsList .goodsListNav text {
+  float: left;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.goods{
+  margin: 10rpx;
+  border-top: #B8B8B8 solid 1px;
+  width: 95%;
+  height: 120px;
+  position: relative;
+}
+
+.goods navigator{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.goods navigator .goodsImg {
+  width: 400rpx;
+  height: 250rpx;
+}
+
+.goods .goodsImg image {
+  height: 100%;
+  width: 100%;
+}
+
+.goods .goordsInfo {
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.goods .goordsInfo .goodsTitle{
+  font-size: 25rpx;
+}
+
+.goods .goordsInfo .goodsPrice{
+  font-size: 30rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 50rpx;
+}
+
+.goods .goordsInfo .goodsPrice text{
+  color: red;
+}
+
+.cancelGoods {
+  position: absolute;
+  bottom: 20rpx;
+  right: 300rpx;
+  width: 100rpx;
+  height: 60rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #CDCD00;
+  border-radius: 30rpx;
+  color: white;
+}

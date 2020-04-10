@@ -1,0 +1,94 @@
+<view class="main">
+    <!-- 这里显示用户昵称或未绑定 -->
+    <!-- <view class="person">
+        
+    </view> -->
+    
+    <view class="list">
+      <!-- 我的商品 -->
+      <view class="myGoods">
+        <navigator url="../my_goods_page/my_goods_page">
+          <image src="../../images/商品 礼物.png"></image>
+          <text>我的商品</text>
+          <image src="../../images/右箭头.png"></image>
+        </navigator>
+      </view>
+      <!-- 我的收藏 -->
+      <view class="myCollect">
+        <navigator url="../my_collect_page/my_collect_page">
+          <image src="../../images/收藏.png"></image>
+          <text>我的收藏</text>
+          <image src="../../images/右箭头.png"></image>
+        </navigator>
+      </view>
+      <!-- 我的订单 -->
+      <view class="myOrder">
+        <navigator url="../my_order_page/my_order_page">
+          <image src="../../images/订单.png"></image>
+          <text>我的订单</text>
+          <image src="../../images/右箭头.png"></image>
+        </navigator>
+      </view>
+      <!-- 个人资料 -->
+      <view class="myInfo">
+        <navigator url="../my_info_page/my_info_page">
+          <image src="../../images/我  个人资料.png"></image>
+          <text>个人资料</text>
+          <image src="../../images/右箭头.png"></image>
+        </navigator>
+      </view>
+      <!-- 我的消息 -->
+      <view class="myMessage">
+        <navigator url="../my_message_page/my_message_page">
+          <image src="../../images/信息.png"></image>
+          <text>我的消息</text>
+          <image src="../../images/右箭头.png"></image>
+        </navigator>
+      </view>
+    </view>
+
+    <!-- 我的商品展示 -->
+    <view class="goodsList myGoods">
+      <view class="goodsListNav">
+          <text>我的商品</text>
+          <navigator url="../my_goods_page/my_goods_page">全部></navigator>
+      </view>
+      <block wx:for="{{myGoodsList}}">
+        <view class="goods">
+            <navigator url="{{item.url}}">
+              <view class="goodsImg">
+                <image src="{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="goordsInfo">
+                <text class="goodsTitle">{{item.title}}</text>
+                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+              </view>
+            </navigator>
+        </view>
+      </block>
+    </view>
+
+    <!-- 我的收藏展示 -->
+    <view class="goodsList myCollect">
+      <view class="goodsListNav">
+          <text>我的收藏</text>
+          <navigator url="#">全部></navigator>
+      </view>
+      <block wx:for="{{myCollectList}}">
+        <view class="goods">
+            <navigator url="{{item.url}}">
+              <view class="goodsImg">
+                <image src="{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="goordsInfo">
+                <text class="goodsTitle">{{item.title}}</text>
+                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+              </view>
+            </navigator>
+        </view>
+      </block>
+    </view>
+
+    <import src="../index/index.wxml"/>    
+    <template is="bottomNav"/>
+</view>

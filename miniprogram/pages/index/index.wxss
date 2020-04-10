@@ -1,0 +1,119 @@
+.main{
+
+}
+
+view{
+  margin: 0rpx;
+  padding: 0rpx;
+}  
+
+.swiperView {
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+
+.goods_classification{
+  margin-top: 20rpx;
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+}
+
+.goods_classification view{
+  margin: 0 auto;
+  width: 20%;
+}
+
+.goods_classification view navigator{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 27rpx;
+}
+
+.goods_classification image{
+  width: 90rpx;
+  height: 90rpx;
+  margin: auto;
+}
+
+.goodsList{
+  width: 100%;
+}
+
+.list{
+  margin-top: 30rpx;
+  width: 100%;
+  border-top: #B8B8B8 solid 3px;
+}
+
+.list .listNav{
+  width: 100%;
+  height: 50rpx;
+  background-color:#E8E8E8;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.list .listNav text {
+  float: left;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.list .listNav navigator {
+  float: right;
+  margin-right: 28rpx;
+}
+
+.goods{
+  margin: 10rpx;
+  border-top: #B8B8B8 solid 1px;
+  width: 95%;
+  height: 120px;
+}
+
+.goods navigator{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.goods navigator .goodsImg {
+  width: 400rpx;
+  height: 250rpx;
+}
+
+.goods .goodsImg image {
+  height: 100%;
+  width: 100%;
+}
+
+.goods .goordsInfo {
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.goods .goordsInfo .goodsTitle{
+  font-size: 25rpx;
+}
+
+.goods .goordsInfo .goodsPrice{
+  font-size: 30rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 50rpx;
+}
+
+.goods .goordsInfo .goodsPrice text{
+  color: red;
+}

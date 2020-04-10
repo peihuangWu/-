@@ -1,0 +1,52 @@
+<view class='main'>
+    <view class="recommend" >
+      <view class="swiper-container">
+        <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+          <block wx:for="{{slider}}" wx:key="unique">
+            <swiper-item>
+              <image src="{{item}}" class="img"></image>
+            </swiper-item>
+          </block>
+        </swiper>
+        <view class="dots">
+          <block wx:for="{{slider}}" wx:key="unique">
+            <view class="dot{{index == swiperCurrent ? ' active' : ''}}" bindtap="chuangEvent" id="{{index}}">{{index+1}}</view>
+          </block>
+        </view>
+      </view>
+    </view>
+
+    <view class="titleAndPrice">
+      <text class="title">{{title}}</text>
+      <text class="num">库存:{{num}}</text>
+      <text class="price">价格：{{price}}</text>
+    </view>
+    
+    <view class="detail">
+        <text>商品描述</text>
+        <rich-text>
+
+        </rich-text>
+    </view>
+
+    <view class="bottomNav">
+        <view bindtap="collect">
+          <navigator url="#">
+            <image src="../../images/收藏2.png"></image>
+            收藏
+          </navigator>
+        </view>
+        <view>
+          <navigator url="../buy_page/buy_page">
+            <image src="../../images/购买.png"></image>
+            购买
+          </navigator>
+        </view>
+        <view>
+          <navigator url="../about_ seller_page/about_seller_page">
+            <image src="../../images/卖家.png"></image>
+            关于卖家
+          </navigator>
+        </view>
+    </view>
+</view>

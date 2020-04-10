@@ -1,0 +1,23 @@
+<view class="main">
+    <!-- 我的商品展示 -->
+    <view class="goodsList">
+      <view class="goodsListNav">
+          <text>我的商品</text>
+      </view>
+      <block wx:for="{{myGoodsList}}">
+        <view class="goods">
+            <navigator url="{{item.url}}">
+              <view class="goodsImg">
+                <image src="{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="goordsInfo">
+                <text class="goodsTitle">{{item.title}}</text>
+                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+              </view>
+            </navigator>
+            <!-- 取消出售该商品 -->
+            <view class="cancelGoods">取消出售</view>
+        </view>
+      </block>
+    </view>
+</view>

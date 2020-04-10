@@ -1,0 +1,27 @@
+<!-- 消息分为三类：1系统通知（如商品发布成功、绑定成功），2发货通知（卖家已发货），3订单通知（有买家购买） -->
+
+<view class="main">
+    <view class="messageBar">
+        消息列表
+    </view>
+    <block wx:for="{{messages}}">
+        <navigator url="../one_message_page/one_message_page">
+            <view class="message">
+                <block wx:if="{{item.type==1}}">
+                    <image src="../../images/系统通知.png"></image>
+                    <text>您有一条系统通知</text>
+                </block>
+                <block wx:elif="{{item.type==2}}">
+                    <image src="../../images/发货通知.png"></image>
+                    <text>您的订单已发货</text>
+                </block>
+                <block wx:else>
+                    <image src="../../images/订单通知.png"></image>
+                    <text>您有一条新订单啦</text>
+                </block>
+                <image wx:if="{{item.hasRead==0}}" src="../../images/未读.png"></image>
+                <image src="../../images/右箭头.png"></image>
+            </view>
+        </navigator>
+    </block>
+</view>

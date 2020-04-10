@@ -1,0 +1,23 @@
+<view class="main">
+    <!-- 我的收藏展示 -->
+    <view class="goodsList">
+      <view class="goodsListNav">
+          <text>我的收藏</text>
+      </view>
+      <block wx:for="{{myCollectList}}">
+        <view class="goods">
+            <navigator url="{{item.url}}">
+              <view class="goodsImg">
+                <image src="{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="goordsInfo">
+                <text class="goodsTitle">{{item.title}}</text>
+                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+              </view>
+            </navigator>
+            <!-- 取消收藏该商品 -->
+            <view class="cancelCollect">取消收藏</view>
+        </view>
+      </block>
+    </view>
+</view>
