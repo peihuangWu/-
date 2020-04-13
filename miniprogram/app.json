@@ -14,7 +14,7 @@
     "pages/buy_page/buy_page",
     "pages/about_ seller_page/about_seller_page",
     "pages/bind_page/bind_page",
-    "pages/deliver goods_page/deliver goods_page"
+    "pages/deliver_goods_page/deliver_goods_page"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

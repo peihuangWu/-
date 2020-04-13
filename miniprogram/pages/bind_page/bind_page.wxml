@@ -31,6 +31,20 @@
             </view>
             <button bindtap="chooseImage" name="image">选择图片</button>
         </view>
+        <view class="view cardView">
+            <view class="card">
+              <image src="../../images/价格详情.png"></image>
+              银行卡号
+            </view>
+            <input type="number" name="card" placeholder="将您卖商品的收益存入您的银行卡"></input>
+        </view>
+        <view class="view cardView2">
+            <view class="card2">
+              <image src="../../images/价格详情.png"></image>
+              重复确认银行卡号
+            </view>
+            <input type="number" name="card2"></input>
+        </view>
         <button name="bind" class="bind" form-type="submit">
             确定绑定
         </button>

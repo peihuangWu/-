@@ -91,7 +91,3 @@ page {
   color: white;
   background-color: #8470FF;
 }
-
-#popup {
-  z-index: 500;
-}
