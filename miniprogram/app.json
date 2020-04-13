@@ -13,7 +13,6 @@
     "pages/one_message_page/one_message_page",
     "pages/buy_page/buy_page",
     "pages/about_ seller_page/about_seller_page",
-    "components/popup/popup",
     "pages/bind_page/bind_page",
     "pages/deliver goods_page/deliver goods_page"
   ],
