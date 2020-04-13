@@ -1,0 +1,95 @@
+/*主容器*/  
+.stepper {  
+  width: 80px;  
+  height: 26px;  
+  /*给主容器设一个边框*/  
+  border: 1px solid #ccc;  
+  border-radius: 3px;  
+  margin-top: 25rpx;
+}  
+
+/*加号和减号*/  
+.stepper text {  
+  width: 19px;  
+  line-height: 26px;  
+  text-align: center;  
+  float: left;  
+}  
+
+/*数值*/  
+.stepper input {  
+  width: 40px;  
+  height: 26px;  
+  float: left;  
+  margin: 0 auto;  
+  text-align: center;  
+  font-size: 12px;  
+  /*给中间的input设置左右边框即可*/  
+  border-left: 1px solid #ccc;  
+  border-right: 1px solid #ccc;  
+}  
+
+/*普通样式*/  
+.stepper .normal{  
+  color: black;  
+}  
+
+/*禁用样式*/  
+.stepper .disabled{  
+  color: #ccc;  
+}
+
+page {
+  background-color: Gainsboro;
+}
+
+.view {
+  width: 100%;
+  border-bottom: Grey solid 1rpx;
+  display: flex;
+  min-height: 120rpx;
+}
+
+.view > text {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+}
+
+.view image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+
+.view > input, .view > textarea {
+  padding-left: 5rpx;
+  border: Grey solid 1rpx;
+  margin-top: 30rpx;
+  min-height: 50rpx;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+}
+
+.location > view {
+  display: flex;
+  flex-direction: row;
+}
+
+.location > view text {
+  margin-left: 30rpx;
+  margin-top: 25rpx;
+}
+
+.view > textarea {
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+button {
+  margin-top: 50rpx;
+  background-color: #EE6363;
+}

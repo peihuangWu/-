@@ -7,15 +7,14 @@
       </view>
       <block wx:for="{{completedOrders}}">
         <view class="goods">
-            <navigator url="{{item.url}}">
-              <view class="goodsImg">
-                <image src="{{item.src}}" mode="aspectFill"></image>
-              </view>
-              <view class="goordsInfo">
-                <text class="goodsTitle">{{item.title}}</text>
-                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
-              </view>
-            </navigator>
+            <view class="goodsImg">
+              <image src="{{item.src}}" mode="aspectFill"></image>
+            </view>
+            <view class="goordsInfo">
+              <text class="goodsTitle">{{item.title}}</text>
+              <text class="goodsNum">数量：{{item.num}}</text>
+              <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+            </view>
         </view>
       </block>
     </view>
@@ -26,16 +25,15 @@
         </view>
         <block wx:for="{{payedOrders}}">
           <view class="goods">
-              <navigator url="{{item.url}}">
-                <view class="goodsImg">
-                  <image src="{{item.src}}" mode="aspectFill"></image>
-                </view>
-                <view class="goordsInfo">
-                  <text class="goodsTitle">{{item.title}}</text>
-                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
-                </view>
-              </navigator>
-              <view class="received">确认收货</view>
+              <view class="goodsImg">
+                <image src="{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="goordsInfo">
+                <text class="goodsTitle">{{item.title}}</text>
+                <text class="goodsNum">数量：{{item.num}}</text>
+                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+              </view>
+              <view class="received" bindtap="receive" data-orderId="{{orderId}}">确认收货</view>
           </view>
         </block>
       </view>
@@ -46,16 +44,15 @@
         </view>
         <block wx:for="{{unpayedOrders}}">
           <view class="goods">
-              <navigator url="{{item.url}}">
-                <view class="goodsImg">
-                  <image src="{{item.src}}" mode="aspectFill"></image>
-                </view>
-                <view class="goordsInfo">
-                  <text class="goodsTitle">{{item.title}}</text>
-                  <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
-                </view>
-              </navigator>
-              <view class="pay">前往支付</view>
+              <view class="goodsImg">
+                <image src="{{item.src}}" mode="aspectFill"></image>
+              </view>
+              <view class="goordsInfo">
+                <text class="goodsTitle">{{item.title}}</text>
+                <text class="goodsNum">数量：{{item.num}}</text>
+                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+              </view>
+              <view class="pay" bindtap="pay" data-orderId="{{orderId}}">前往支付</view>
           </view>
         </block>
     </view>

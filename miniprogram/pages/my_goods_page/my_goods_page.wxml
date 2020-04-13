@@ -4,20 +4,22 @@
       <view class="goodsListNav">
           <text>我的商品</text>
       </view>
-      <block wx:for="{{myGoodsList}}">
-        <view class="goods">
-            <navigator url="{{item.url}}">
-              <view class="goodsImg">
-                <image src="{{item.src}}" mode="aspectFill"></image>
-              </view>
-              <view class="goordsInfo">
-                <text class="goodsTitle">{{item.title}}</text>
-                <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
-              </view>
-            </navigator>
-            <!-- 取消出售该商品 -->
-            <view class="cancelGoods">取消出售</view>
-        </view>
-      </block>
+      <scroll-view scroll-y="true" bindscrolltoupper="scrollToUpper" bindscrolltolower="scrollToLower" upper-threshold="30" lower-threshold="30">
+          <block wx:for="{{myGoodsList}}">
+            <view class="goods">
+                <navigator url="../goods_detail_page/goods_detail_page?type{{item.type}}&id={{item.id}}">
+                  <view class="goodsImg">
+                    <image src="{{item.src}}" mode="aspectFill"></image>
+                  </view>
+                  <view class="goordsInfo">
+                    <text class="goodsTitle">{{item.title}}</text>
+                    <text class="goodsPrice">价格: <text>{{item.price}}</text></text>
+                  </view>
+                </navigator>
+                <!-- 取消出售该商品 -->
+                <view class="cancelGoods" bindtap="cancel" data-type="{{item.type}}" data-id="{{item.id}}">取消出售</view>
+            </view>
+          </block>
+      </scroll-view>
     </view>
 </view>

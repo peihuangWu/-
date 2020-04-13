@@ -51,55 +51,52 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      let that = this;
+      that.setData({
+        "page": parseInt(options.page) - 1,
+        "sessionId": options.sessionId
+      });
+      wx.request({
+        url: '#/get_info',
+        header: {
+          "Content-Type": "application/json"
+        },
+        data: {
+          "sessionId": that.data.sessionId,
+        },
+        success: function(response) {
+          that.setData({
+            id: response.data.id,
+            nickname: response.data.nickname,
+            gender: response.data.gender,
+            collegeIndex: response.data.college,
+            yearIndex: response.data.year,
+            monthIndex: response.data.month,
+            signature: response.data.signature,
+          });
+        }
+      });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  submit: function(e) {
+    wx.request({
+      url: '#/set_info',
+      header: {
+        "Content-Type": "application/json"
+      },
+      data: {
+        "sessionId": that.data.sessionId,
+        "id": e.detail.value["id"],
+        "nickname": e.detail.value["nickname"],
+        "gender": e.detail.value["gender"],
+        "collegeIndex": e.detail.value["collegeIndex"],
+        "yearIndex": e.detail.value["yearIndex"],
+        "monthIndex": e.detail.value["monthIndex"],
+        "signature": e.detail.value["signature"],
+      },
+      success: function(response) {
+      
+      }
+    });
   }
 })

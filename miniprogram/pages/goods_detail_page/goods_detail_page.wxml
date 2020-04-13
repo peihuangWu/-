@@ -30,10 +30,11 @@
     </view>
 
     <view class="bottomNav">
-        <view bindtap="collect">
+        <view bindtap="collect" data-id="{{id}}">
           <navigator url="#">
             <image src="../../images/收藏2.png"></image>
-            收藏
+            <text wx:if="{{is_collect > 0}}">已收藏</text>
+            <text wx:else>收藏</text>
           </navigator>
         </view>
         <view>
@@ -43,7 +44,7 @@
           </navigator>
         </view>
         <view>
-          <navigator url="../about_ seller_page/about_seller_page">
+          <navigator url="../about_ seller_page/about_seller_page?sellerId={{sellerId}}">
             <image src="../../images/卖家.png"></image>
             关于卖家
           </navigator>

@@ -1,0 +1,38 @@
+<view class="main">
+    <form bindsubmit="#" bindreset="#">
+        <view class="view nameView">
+            <view class="name">
+              <image src="../../images/标题栏.png"></image>
+              真实姓名
+            </view>
+            <input name="name" auto-focus="true">
+            </input> 
+        </view>
+        <view class="view collegeView">
+            <view class="college">
+              <image src="../../images/类型.png"></image>
+              所在学院
+            </view>
+            <picker name="college" value="{{collegeIndex}}" range="{{colleges}}" bindchange="pickerChange">
+                {{colleges[collegeIndex]}}
+            </picker>
+        </view>
+        <view class="view idView">
+            <view class="id">
+              <image src="../../images/价格详情.png"></image>
+              学号
+            </view>
+            <input type="number" name="id"></input>
+        </view>
+        <view class="view imageView">
+            <view class="image">
+              <image src="../../images/图片.png"></image>
+              证明材料（学生证或一卡通）
+            </view>
+            <button bindtap="chooseImage" name="image">选择图片</button>
+        </view>
+        <button name="bind" class="bind" form-type="submit">
+            确定绑定
+        </button>
+    </form>
+</view>

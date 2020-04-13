@@ -4,42 +4,42 @@
       <view class="view id">
         <image src="../../images/id.png"></image>
         <text>我的ID:</text>
-        <input disabled="true" value="{{id}}"></input>
+        <input disabled="true" value="{{id}}" name="id"></input>
       </view>
       <view class="view nickname">
         <!-- 昵称不能超过12个字 -->
         <image src="../../images/昵称2.png"></image>
         <text>我的昵称:</text>
-        <input maxlength="12" value="{{nickname}}"></input>
+        <input maxlength="12" value="{{nickname}}" name="nickname"></input>
       </view>
       <!-- bug:无论如何总是选中女 -->
       <view class="view gender">
         <image src="../../images/性别.png"></image>
         <text>性别:</text>
         <block wx:if="{{gender>0}}">
-            <radio-group>
-              <radio checked="true" value="male"></radio>男
-              <radio checked="false" value="female"></radio>女
+            <radio-group name="gender">
+              <radio checked="true" value="1"></radio>男
+              <radio checked="false" value="0"></radio>女
             </radio-group>
         </block>
         <block wx:else>
-            <radio-group>
-              <radio checked="false" value="male"></radio>男
-              <radio checked="true" value="female"></radio>女
+            <radio-group name="gender">
+              <radio checked="false" value="1"></radio>男
+              <radio checked="true" value="0"></radio>女
             </radio-group>
         </block>
       </view>
       <view class="view college">
         <image src="../../images/学院.png"></image>
         <text>所在学院:</text>
-        <picker value="{{collegeIndex}}" range="{{colleges}}">{{colleges[collegeIndex]}}</picker>
+        <picker name="college" value="{{collegeIndex}}" range="{{colleges}}">{{colleges[collegeIndex]}}</picker>
       </view>
       <view class="view birthday">
         <image src="../../images/出生年月.png"></image>
         <text>出生年月:</text>
-        <picker value="{{yearIndex}}" range="{{year}}">{{year[yearIndex]}}</picker>
+        <picker name="yearIndex" value="{{yearIndex}}" range="{{year}}">{{year[yearIndex]}}</picker>
         <text>年</text>
-        <picker value="{{monthIndex}}" range="{{month}}">{{month[monthIndex]}}</picker>
+        <picker name="monthIndex" value="{{monthIndex}}" range="{{month}}">{{month[monthIndex]}}</picker>
         <text>月</text>
       </view>
       <view class="view signature">
@@ -48,7 +48,7 @@
           <image src="../../images/个性.png"></image>
           <text>个性签名:</text>
         </view>
-        <textarea auto-height="true" value="{{signature}}" maxlength="50">
+        <textarea name="signature" auto-height="true" value="{{signature}}" maxlength="50">
         </textarea>
       </view>
       <button form-type="submit">保存</button>

@@ -1,0 +1,45 @@
+<view class="main">
+    <form bindsubmit="submit">
+        <view class="view number">
+            <image src="../../images/已购数量.png"></image>
+            <text>购买数量:</text>
+            <!-- 此处提交订单后程序自行验证购买数量是否合法 -->
+            <view class="stepper">  
+                <!-- 减号 -->  
+                <text class="{{minusStatus}}">-</text>  
+                <!-- 数值 -->  
+                <input type="number" value="{{num}}" disabled="true"/>  
+                <!-- 加号 -->  
+                <text class="normal">+</text>  
+            </view>  
+        </view>
+        <view class="view name">
+            <image src="../../images/姓名.png"></image>
+            <text>收件人:</text>
+            <input disabled="true"></input>
+        </view>
+        <view class="view phone">
+            <image src="../../images/电话号码.png"></image>
+            <text>联系电话:</text>
+            <input type="number" disabled="true"></input>
+        </view>
+        <view class="view price">
+            <image src="../../images/价格.png"></image>
+            <text>价格:</text>
+            <text>{{sum}}</text>
+        </view>
+        <view class="view location">
+            <view>
+                <image src="../../images/位置.png"></image>
+                <text>收货地址:</text>
+            </view>
+            <textarea disabled="true"></textarea>
+        </view>
+        <button type="form-type">
+            拒绝订单
+        </button>
+        <button type="form-type">
+            确认发货
+        </button>
+    </form>
+</view>

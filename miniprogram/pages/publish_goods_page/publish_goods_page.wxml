@@ -1,6 +1,5 @@
-<!-- 需要验证用户是否已经绑定，若无绑定则禁止发布商品 -->
 <view class="main">
-    <form bindsubmit="#" bindreset="#">
+    <form bindsubmit="submit">
         <view class="view titleView">
             <view class="title">
               <image src="../../images/标题栏.png"></image>
@@ -25,6 +24,13 @@
             </view>
             <input type="number" name="price"></input>
         </view>
+        <view class="view numView">
+            <view class="price">
+              <image src="../../images/已购数量.png"></image>
+              商品库存
+            </view>
+            <input type="number" name="price"></input>
+        </view>
         <view class="view imageView">
             <view class="image">
               <image src="../../images/图片.png"></image>
@@ -38,7 +44,7 @@
               商品详细描述
             </view>
             <view class="container">
-              <editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
+              <editor id="editor" name="detail" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady">
               </editor>
               <view class="toolbar" catchtouchend="format">
                 <i class="iconfont icon-charutupian" catchtouchend="insertImage"></i>

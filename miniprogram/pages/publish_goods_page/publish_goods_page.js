@@ -1,10 +1,12 @@
 // miniprogram/pages/publish_goods_page/publish_goods_page.js
+var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    tempFilePaths:[],
+    flag: true,
     classificationList:[
       "书籍资料",
       "零食特产",
@@ -22,27 +24,44 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const platform = wx.getSystemInfoSync().platform
-    const isIOS = platform === 'ios'
-    this.setData({ isIOS})
-    const that = this
-    this.updatePosition(0)
-    let keyboardHeight = 0
-    wx.onKeyboardHeightChange(res => {
-      if (res.height === keyboardHeight) return
-      const duration = res.height > 0 ? res.duration * 1000 : 0
-      keyboardHeight = res.height
-      setTimeout(() => {
-        wx.pageScrollTo({
-          scrollTop: 0,
-          success() {
-            that.updatePosition(keyboardHeight)
-            that.editorCtx.scrollIntoView()
-          }
+      if (app.globalData.status == 1) {
+          wx.showModal({
+            title: '系统提醒',
+            content: '您还未绑定，请先前往绑定',
+            success: function (res) {
+                if (res.confirm) {
+                  wx.redirectTo({
+                    url: '../bind_page/bind_page',
+                  })
+                }else{
+                  wx.navigateBack({
+                    delta: -1
+                  });
+                }
+            }
         })
-      }, duration)
+      };
+      const platform = wx.getSystemInfoSync().platform;
+      const isIOS = platform === 'ios';
+      this.setData({ isIOS});
+      const that = this;
+      this.updatePosition(0);
+      let keyboardHeight = 0;
+      wx.onKeyboardHeightChange(res => {
+        if (res.height === keyboardHeight) return;
+        const duration = res.height > 0 ? res.duration * 1000 : 0;
+        keyboardHeight = res.height;
+        setTimeout(() => {
+          wx.pageScrollTo({
+            scrollTop: 0,
+            success() {
+              that.updatePosition(keyboardHeight)
+              that.editorCtx.scrollIntoView()
+            }
+          })
+        }, duration);
 
-    })
+      });
   },
 
   /**
@@ -175,5 +194,26 @@ Page({
         })
       }
     })
-},
+  },
+
+  submit: function(e){
+    let that = this;
+    
+
+  },
+
+  chooseImage: function(e) {
+      var that = this;
+      wx.chooseImage({
+        count: 6,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
+        success: function (res) {
+          that.setData({
+            tempFilePaths: res.tempFilePaths,
+          });
+        },
+      });
+  }
+
 })

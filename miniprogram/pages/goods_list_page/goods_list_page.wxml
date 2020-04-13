@@ -2,16 +2,15 @@
   <view class='page_row'>  
       <view class="search">  
         <icon class="searchIcon" size='20' type='search'></icon>  
-        <input placeholder="搜索商品" value="{{searchValue}}"/>  
+        <input placeholder="搜索商品" bindinput="changeSearchValue"/>  
       </view>  
-      <view class='sousuo'>搜索</view>  
+      <view class='sousuo' bindtap="search">搜索</view>  
   </view>
 
-  <!-- bug:划到底部时候无法触发事件 -->
-  <scroll-view class="list" scroll-y="true" bindscrolltolower="scrollToLower" lower-threshold="30">
+  <scroll-view class="list" scroll-y="true" bindscrolltoupper="scrollToUpper" bindscrolltolower="scrollToLower" upper-threshold="30" lower-threshold="30">
       <block wx:for="{{goodsList}}">
         <view class="goods">
-            <navigator url="{{item.url}}">
+            <navigator url="../goods_detail_page/goods_detail_page?type={{item.type}}&id={{item.id}}">
               <view class="goodsImg">
                 <image src="{{item.src}}" mode="aspectFill"></image>
               </view>

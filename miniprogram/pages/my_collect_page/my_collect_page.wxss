@@ -67,9 +67,9 @@
   position: absolute;
   bottom: 20rpx;
   right: 300rpx;
-  width: 100rpx;
-  height: 60rpx;
-  font-size: 20rpx;
+  width: 140rpx;
+  height: 70rpx;
+  font-size: 30rpx;
   text-align: center;
   line-height: 60rpx;
   background-color: #CDCD00;

@@ -12,6 +12,11 @@ view{
   margin-top: 10rpx;
 }
 
+.banner navigator {
+  width: 100%;
+  height: 100%;
+}
+
 .banner image{
   width: 100%;
   height: 100%;

@@ -5,7 +5,7 @@
         消息列表
     </view>
     <block wx:for="{{messages}}">
-        <navigator url="../one_message_page/one_message_page">
+        <navigator url="../one_message_page/one_message_page?sessionId={{sessionId}}&id={{id}}">
             <view class="message">
                 <block wx:if="{{item.type==1}}">
                     <image src="../../images/系统通知.png"></image>
