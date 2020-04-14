@@ -21,6 +21,7 @@ Page({
     });
     wx.request({
       url: '#/get_msg',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },

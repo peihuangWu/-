@@ -43,6 +43,7 @@ Page({
       });
       wx.request({
         url: '#/about_seller',
+        method:"POST",
         header: {
           "Content-Type": "application/json"
         },

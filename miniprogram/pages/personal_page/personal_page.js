@@ -77,6 +77,7 @@ Page({
 
     wx.request({
       url: '#/get_myGoods',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },
@@ -94,6 +95,7 @@ Page({
 
     wx.request({
       url: '#/get_collect',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },

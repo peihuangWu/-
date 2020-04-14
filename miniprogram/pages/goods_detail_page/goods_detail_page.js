@@ -27,6 +27,7 @@ Page({
     if (that.data.is_collect == 0) {
         wx.request({
           url: '#/collect',
+          method:"POST",
           header: {
             "Content-Type": "application/json"
           },
@@ -44,6 +45,7 @@ Page({
     } else {
         wx.request({
           url: '#/remove/myCollect',
+          method:"POST",
           header: {
             "Content-Type": "application/json"
           },

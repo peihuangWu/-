@@ -29,6 +29,7 @@ Page({
     let that = this;
     wx.request({
       url: '#/get_myGoods',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },
@@ -56,6 +57,7 @@ Page({
       });
       wx.request({
         url: '#/get_myGoods',
+        method:"POST",
         header: {
           "Content-Type": "application/json"
         },
@@ -142,6 +144,7 @@ Page({
     let that = this;
     wx.request({
       url: '#/remove/myGoods',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },

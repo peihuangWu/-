@@ -58,6 +58,7 @@ Page({
       });
       wx.request({
         url: '#/get_info',
+        method:"POST",
         header: {
           "Content-Type": "application/json"
         },
@@ -81,6 +82,7 @@ Page({
   submit: function(e) {
     wx.request({
       url: '#/set_info',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },

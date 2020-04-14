@@ -154,6 +154,7 @@ Page({
           success: function(res) {
               wx.request({
                 url: '#/get_session',
+                method:"POST",
                 data: {
                   code: res.code
                 },
@@ -182,6 +183,7 @@ Page({
 
       wx.request({
         url: '#/login',
+        method:"POST",
         header: {
           "Content-Type": "application/json"
         },
@@ -223,6 +225,7 @@ Page({
 
       wx.request({
         url: '#/get_list',
+        method:"POST",
         header: {
           "Content-Type": "application/json"
         },
@@ -240,6 +243,7 @@ Page({
 
       wx.request({
         url: '#/get_list',
+        method:"POST",
         header: {
           "Content-Type": "application/json"
         },

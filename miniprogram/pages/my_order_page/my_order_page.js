@@ -103,6 +103,7 @@ Page({
 
     wx.request({
       url: '#/get_order',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },
@@ -119,6 +120,7 @@ Page({
 
     wx.request({
       url: '#/get_order',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },
@@ -135,6 +137,7 @@ Page({
 
     wx.request({
       url: '#/get_order',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },
@@ -170,6 +173,7 @@ Page({
           if (res.confirm) {
             wx.request({
               url: '#/confirm_recieve',
+              method:"POST",
               header: {
                 "Content-Type": "application/json"
               },

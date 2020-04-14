@@ -36,6 +36,7 @@ Page({
 
     wx.request({
       url: '#/get_msg_list',
+      method:"POST",
       header: {
         "Content-Type": "application/json"
       },

@@ -78,6 +78,7 @@ Page({
       let that = this;
       wx.request({
         url: '#/get_list',
+        method:"POST",
         header: {
           "Content-Type": "application/json"
         },
@@ -110,6 +111,7 @@ Page({
     if (that.data.type == "search") {
         wx.request({
           url: '#/search',
+          method:"POST",
           header: {
             "Content-Type": "application/json"
           },
@@ -127,6 +129,7 @@ Page({
     } else {
         wx.request({
           url: '#/get_list',
+          method:"POST",
           header: {
             "Content-Type": "application/json"
           },
